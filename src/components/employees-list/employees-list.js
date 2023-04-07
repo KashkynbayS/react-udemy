@@ -7,10 +7,10 @@ const EmployeesList = ({data}) => {
     const elements = data.map(item => {
         const {id, ...itemProps} = item;
         return (
-            // name={item.name} salary={item.salary} == {...itemProps}
             <EmployeesListItem key={id} {...itemProps}/>
+            // <EmployeesListItem name={item.name} salary={item.salary}/>
         )
-    })
+    }) 
 
     return (
         <ul className="app-list list-group">
@@ -19,4 +19,4 @@ const EmployeesList = ({data}) => {
     )
 }
 
-export default EmployeesList; 
+export default EmployeesList;
